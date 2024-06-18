@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+    <div class="form-container" style="width: 300px; padding: 20px; border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <p>Scrapper Download Automation</p>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="start_date" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Entering the start date (yyyy-mm-dd)">
+            <input type="text" name="end_date" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Entering the end date (yyyy-mm-dd)">
+            <input type="text" name="seller_id" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Entering the seller_id">
+            <input type="text" name="launcher" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your name as the launcher">
+            <button type="submit" style="width: 100%; padding: 10px; background-color: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Launch Job</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
